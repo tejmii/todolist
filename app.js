@@ -8,7 +8,7 @@ var express = require('express'),
 
 	
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://admin:admin@cluster0-baedr.mongodb.net/test?retryWrites=true');
+mongoose.connect('mongodb+srv://admin:admin@cluster0-baedr.mongodb.net/test?retryWrites=true');
 
 
 var app = express();
