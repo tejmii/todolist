@@ -6,9 +6,9 @@ var express = require('express'),
 	passport  = require('passport'),
 	port = process.env.PORT || 8080;
 
-	
+
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb+srv://admin:admin@cluster0-baedr.mongodb.net/test?retryWrites=true');
+mongoose.connect('mongodb+srv://admin:admin@cluster0-baedr.mongodb.net/test');
 
 
 var app = express();
