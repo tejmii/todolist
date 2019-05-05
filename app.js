@@ -6,7 +6,7 @@ var express = require('express'),
 	passport  = require('passport'),
 	port = process.env.PORT || 8080;
 
-mongoose.connect('mongodb+srv://admin:admin@cluster0-baedr.mongodb.net/test?retryWrites=true');
+mongoose.connect('mongodb+srv://admin:admin@cluster0-baedr.mongodb.net/todo?retryWrites=true');
 
 var app = express();
 
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.use(expressSession({
-	secret: 'tajneslovo123',
+	secret: 'sup3rtajn3h3slo',
 	resave: false,
 	saveUninitialized: false
 }));
