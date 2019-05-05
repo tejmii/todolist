@@ -6,7 +6,7 @@ var express = require('express'),
 	passport  = require('passport'),
 	port = process.env.PORT || 8080;
 
-mongoose.connect('connectURL');
+mongoose.connect('mongodb://localhost/test');
 
 var app = express();
 
