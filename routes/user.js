@@ -79,9 +79,7 @@ router.post('/signup', function(req, res){
         res.redirect('/');
         });      
       }
-      else{
-        return done(null, false, { message: 'Uživatel již existuje.' });
-      }
+      
     });
 });
 
