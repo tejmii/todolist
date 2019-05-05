@@ -73,9 +73,16 @@ router.get('/signup', function(req, res){
 });
 
 router.post('/signup', function(req, res){	
-	new User({username: req.body.username, password: req.body.password}).save(function(err, doc){
+  User.findOne({ username: req.body.username }, function (err, user) {
+      if (!user) {
+        new User({username: req.body.username, password: req.body.password}).save(function(err, doc){
         res.redirect('/');
-	});
+        });      
+      }
+      else{
+        return done(null, false, { message: 'Uživatel již existuje.' });
+      }
+    });
 });
 
 module.exports = router;
