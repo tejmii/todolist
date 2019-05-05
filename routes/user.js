@@ -79,6 +79,7 @@ router.post('/signup', function(req, res){
         res.redirect('/');
         });      
       }
+      res.render('login', { message: 'exiatence' });
       
     });
 });
