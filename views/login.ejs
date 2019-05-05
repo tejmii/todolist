@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>TODO List</title>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link rel="stylesheet" href="/stylesheets/bootstrap.css" type="text/css">
+</head>
+<body class="container-fluid full">
+<div class="container vertical-center" >
+	<div class="col-lg-5" style="margin: auto auto">
+		<div class="jumbotron">
+			<img src="images/OvMZBs9.jpg" class="img-fluid" alt="Logo">
+			<div class="col-xs-12" style="height:50px;"></div>
+			<form action="/" method="post">
+				<div class="form-group">
+					<input type="text" class="form-control" name="username" placeholder="Username">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" name="password" placeholder="Password">
+				</div>
+				<button type="submit" class="btn btn-dark form-control">
+					Login
+				</button>
+				<% if (message) { %>
+				<div class="col-xs-12" style="height:15px;"></div>
+				<p class="alert alert-dark text-center">
+					<%= message %>
+				</p>
+				<% } %>
+			</form>
+			<a href="/signup">Create account!</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
