@@ -11,10 +11,10 @@ var User = mongoose.model('user');
 passport.use( new passportLocal.Strategy(function(username, password, done){
 	User.findOne({ username: username }, function (err, user) {
       if (!user) {
-        return done(null, false, { message: 'Username not found' });
+        return done(null, false, { message: 'Uživatel nenalezen!' });
       }
       if (user.password !== password) {
-        return done(null, false, { message: 'Wrong password' });
+        return done(null, false, { message: 'Špatné heslo!' });
       }
       return done(null, user);
     });
@@ -80,7 +80,7 @@ router.post('/signup', function(req, res){
         });      
       }
       if (user) {
-              res.render('login', { message: 'exiatence' });
+              res.render('login', { message: 'Uživatel již existuje!' });
  
       }
 
