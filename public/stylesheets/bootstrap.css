@@ -9,11 +9,11 @@
 
 .vertical-center {
   min-height: 100%;
-  min-height: 200px;
+  min-height: 400px;
   display: flex;
   align-items: center;
 }
 
 a {
-color: #474747;
+color: #47451b;
 }
