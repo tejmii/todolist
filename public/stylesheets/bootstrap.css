@@ -10,7 +10,7 @@
 .vertical-center {
   min-height: 100%;
   min-height: 200px;
-  width: 350px;
+  width: 1350px;
   display: flex;
   align-items: center;
 }
